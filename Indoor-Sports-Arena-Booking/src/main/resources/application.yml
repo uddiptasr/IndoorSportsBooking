@@ -1,0 +1,21 @@
+server:
+    error:
+        include-message: always
+    port: 8181
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: rootroot
+        testWhileIdle: true
+        timeBetweenEvictionRunsMillis: 60000
+        url: jdbc:mysql://localhost/proj
+        username: root
+        validationQuery: SELECT 1
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate:
+                id:
+                    new_generator_mappings: false
